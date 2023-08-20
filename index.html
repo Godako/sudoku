@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Sodoku</title>
+</head>
+
+<body class="game-container">
+
+        <div class="d-flex flex-row justify-content-center game-container">
+
+                <table id="sudoku-table" class="d-flex flex-column">
+                        <tbody>
+                                <tr>
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" type="text"
+                                                        maxlength="1" id="11"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="12"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3">
+                                                <input value="" inputmode="numeric" pattern="[1-9]" type="text"
+                                                        maxlength="1" id="13"
+                                                        oninput="window.operator.validateInput(this)">
+                                        </td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="21"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="22"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="23"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="31"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="32"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="33"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="14"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="15"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="16"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="24"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="25"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="26"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="34"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="35"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="36"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="17"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="18"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="19"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="27"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="28"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="29"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="37"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="38"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="39"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+                                </tr>
+
+                                <tr>
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="41"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="42"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="43"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="51"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="52"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="53"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="61"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="62"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="63"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="44"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="45"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="46"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="54"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="55"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="56"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="64"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="65"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="66"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="47"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="48"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="49"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="57"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="58"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="59"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="67"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="68"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="69"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+                                </tr>
+
+                                <tr>
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="71"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="72"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="73"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="81"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="82"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="83"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="91"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="92"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="93"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="74"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="75"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="76"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="84"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="85"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="86"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="94"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="95"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="96"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+
+                                <tr>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="77"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="78"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="79"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="87"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="88"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="89"
+                                                        oninput="window.operator.validateInput(this)"></td>
+
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="97"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="98"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                        <td class="border-5 h3"><input value="" inputmode="numeric" pattern="[1-9]"
+                                                        type="text" maxlength="1" id="99"
+                                                        oninput="window.operator.validateInput(this)"></td>
+                                </tr>
+                                </tr>
+                        </tbody>
+                </table>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center game-container">
+                <div class="col text-center game-container">
+                        <button class="btn btn-dark" onclick="window.operator.sudoku.checkTable()">Check</button>
+                        <button class="btn btn-dark" onclick="window.operator.clearErrors()">Clear errors</button>
+                        <button class="btn btn-dark" onclick="window.operator.newGame()">New game</button>
+                </div>
+        </div>
+
+        <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>
